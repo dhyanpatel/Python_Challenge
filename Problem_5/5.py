@@ -1,5 +1,4 @@
 import pickle, requests
-from pprint import pprint
 
 pickle_file = "http://www.pythonchallenge.com/pc/def/banner.p"
 url = "http://www.pythonchallenge.com/pc/def/{}.html"
@@ -7,7 +6,7 @@ url = "http://www.pythonchallenge.com/pc/def/{}.html"
 request = requests.get(pickle_file)
 
 newFile = pickle.loads(request.content)
-
+print(newFile)
 for x in newFile:
     for y in x:
         for i in range(y[1]):
